@@ -66,7 +66,7 @@ const VEHICLES = [
     "fuel": "Benzin",
     "transmission": "Otomatik",
     "price": 850,
-    "image": "ford-focus.png",
+    "image": "Ford-focus.png",
     "type": "Hatchback"
   },
   {
