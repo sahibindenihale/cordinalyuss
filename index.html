@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cordinalyus Rent Filo</title>
+  <meta name="description" content="Cordinalyus Rent Filo - Mobil uyumlu premium rent a car sitesi" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <img id="cursorCar" class="cursor-car" src="assets/images/cursor-car.png" alt="cursor">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#hero"><img class="logo" src="assets/images/logo.png" alt="Cordinalyus Rent Filo"></a>
+      <nav class="nav">
+        <a href="#hero">Ana Sayfa</a>
+        <a href="#fleet">Araçlar</a>
+        <a href="#campaigns">Kampanyalar</a>
+        <a href="#features">Neden Biz?</a>
+        <a href="#contact">İletişim</a>
+      </nav>
+      <a class="btn btn-primary" href="tel:05016874234">Hemen Ara</a>
+      <button id="menuToggle" class="menu-toggle">☰</button>
+    </div>
+    <div id="mobileMenu" class="container mobile-menu">
+      <a href="#hero">Ana Sayfa</a>
+      <a href="#fleet">Araçlar</a>
+      <a href="#campaigns">Kampanyalar</a>
+      <a href="#features">Neden Biz?</a>
+      <a href="#contact">İletişim</a>
+      <a class="btn btn-primary" href="tel:05016874234" style="margin-top:12px">Hemen Ara</a>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge" id="heroEyebrow"></div>
+        <h1 class="gold-text" id="heroTitle"></h1>
+        <p id="heroDesc"></p>
+        <div class="hero-actions">
+          <a href="#fleet" class="btn btn-primary">Araçları İncele</a>
+          <a href="tel:05016874234" class="btn btn-outline">Hemen Ara</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong class="gold-text">27+</strong><span>Araç</span></div>
+          <div class="stat"><strong class="gold-text">%100</strong><span>Sınırsız KM</span></div>
+          <div class="stat"><strong class="gold-text">%98</strong><span>Müşteri Memnuniyeti</span></div>
+          <div class="stat"><strong class="gold-text">7/24</strong><span>Destek</span></div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-frame"><img id="heroImage" src="" alt="hero"></div>
+        <div class="hero-controls">
+          <div class="dots">
+            <button class="dot active"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+          </div>
+          <div class="arrow-wrap">
+            <button id="prevHero" class="icon-btn">←</button>
+            <button id="nextHero" class="icon-btn">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="campaigns" class="marquee"><div id="campaignTrack" class="track"></div></section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-title">
+        <div class="badge">Neden Cordinalyus?</div>
+        <h2><span class="gold-text">Premium Rent A Car</span><br>deneyimini yeniden tanımlıyoruz</h2>
+        <p>Mobil uyumlu, premium görünümlü ve hızlı rezervasyona odaklanan modern rent a car sitesi deneyimi.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon">🛡️</div><h3>Full Kaskolu Güvence</h3><p>Tüm araçlarımız güvenliğiniz için kasko ve sigorta kapsamındadır.</p></article>
+        <article class="feature-card"><div class="feature-icon">∞</div><h3>Sınırsız KM</h3><p>Ekstra kilometre ücreti olmadan seyahatinizin tadını çıkarın.</p></article>
+        <article class="feature-card"><div class="feature-icon">%</div><h3>Avantajlı Kampanyalar</h3><p>Online rezervasyona özel indirimler ve dönemsel fırsatlar.</p></article>
+        <article class="feature-card"><div class="feature-icon">🚘</div><h3>Geniş Filo</h3><p>Ekonomik, sedan, SUV ve premium segmentte zengin araç seçeneği.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="fleet" class="section" style="padding-top:0">
+    <div class="container">
+      <div class="fleet-head">
+        <div>
+          <div class="badge">Filomuz</div>
+          <h2 style="font-size:52px;line-height:1.08;margin:18px 0 0;font-weight:900">Tüm Araçlar <span class="gold-text">Otomatik Filtreleme</span></h2>
+          <p style="max-width:760px;color:#bcbcbc;line-height:1.7">Marka, yakıt tipi ve vites seçimine göre filonu hızlıca filtrele. Ekonomik, sedan, SUV ve premium araçları anında listele.</p>
+        </div>
+        <div id="fleetCount" class="pill"></div>
+      </div>
+
+      <div class="filters">
+        <input id="searchInput" class="input" placeholder="Marka veya model ara">
+        <select id="brandFilter" class="select"></select>
+        <select id="fuelFilter" class="select"></select>
+        <select id="transmissionFilter" class="select"></select>
+      </div>
+
+      <div id="fleetGrid" class="fleet-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-panel">
+        <div class="cta-grid">
+          <div>
+            <div class="badge">Hızlı İletişim</div>
+            <h2 style="font-size:52px;line-height:1.08;margin:18px 0 0;font-weight:900">Aracını şimdi seç,<br><span class="gold-text">yola güvenle çık</span></h2>
+            <p style="max-width:720px;color:#c3c3c3;line-height:1.7;margin-top:16px">Online rezervasyon, ücretsiz vale teslimatı, sınırsız kilometre ve güçlü kampanyalarla Cordinalyus Rent Filo her zaman yanında.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="tel:05016874234">Hemen Ara</a>
+              <a class="btn btn-outline" target="_blank" href="https://wa.me/905016874234">WhatsApp</a>
+            </div>
+          </div>
+          <div class="mini-grid">
+            <div class="mini"><div class="feature-icon">∞</div><h4>Sınırsız Kilometre</h4><p>Ek ücret olmadan daha özgür yolculuk.</p></div>
+            <div class="mini"><div class="feature-icon">🛡️</div><h4>Sigortalı Güvence</h4><p>Güvenli filo, güvenli yolculuk.</p></div>
+            <div class="mini"><div class="feature-icon">☎️</div><h4>7/24 Destek</h4><p>Rezervasyon ve teslimat desteği.</p></div>
+            <div class="mini"><div class="feature-icon">%</div><h4>Özel Kampanyalar</h4><p>Online rezervasyona özel fırsatlar.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="logo" src="assets/images/logo.png" alt="logo">
+        <p style="margin-top:14px;max-width:620px">Premium görünüm, güçlü kampanyalar ve geniş araç filosuyla modern rent a car deneyimi.</p>
+      </div>
+      <div>
+        <h3>Menü</h3>
+        <a href="#hero">Ana Sayfa</a><br>
+        <a href="#fleet">Araçlar</a><br>
+        <a href="#campaigns">Kampanyalar</a><br>
+        <a href="#contact">İletişim</a>
+      </div>
+      <div>
+        <h3>İletişim</h3>
+        <p>0501 687 42 34<br>info@cordinalyus.com<br>İstanbul / Türkiye</p>
+      </div>
+    </div>
+    <div class="container copyright">© 2026 Cordinalyus Rent Filo — Tüm hakları saklıdır.</div>
+  </footer>
+
+  <div class="floating-actions">
+    <a class="float-call" href="tel:05016874234">📞 Hemen Ara</a>
+    <a class="float-wa" href="https://wa.me/905016874234" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
